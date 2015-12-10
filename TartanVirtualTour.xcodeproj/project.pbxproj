@@ -13,6 +13,15 @@
 		0DBB95471C14D4120061191B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DBB95461C14D4120061191B /* Images.xcassets */; };
 		0DBB954A1C14D4120061191B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DBB95481C14D4120061191B /* LaunchScreen.xib */; };
 		0DBB95561C14D4120061191B /* TartanVirtualTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB95551C14D4120061191B /* TartanVirtualTourTests.swift */; };
+		0DBB95601C14D4F00061191B /* tartanbgd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DBB955F1C14D4F00061191B /* tartanbgd.jpg */; };
+		0DBB95661C14DB6C0061191B /* TartanMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB95651C14DB6C0061191B /* TartanMapViewController.swift */; };
+		0DBB95681C1503AA0061191B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB95671C1503AA0061191B /* Location.swift */; };
+		0DBB956A1C1504240061191B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB95691C1504240061191B /* DataManager.swift */; };
+		0DD3F6C41C167173004A6950 /* TourStopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3F6C31C167173004A6950 /* TourStopInfoViewController.swift */; };
+		0DD3F6C81C16B43B004A6950 /* MapVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3F6C71C16B43B004A6950 /* MapVCExtension.swift */; };
+		0DE1AF461C151CFC00EF9AAA /* TourStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1AF451C151CFC00EF9AAA /* TourStops.swift */; };
+		0DE1AF4A1C1520AD00EF9AAA /* TourStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1AF491C1520AD00EF9AAA /* TourStop.swift */; };
+		0DFE09A81C193AA900E41C31 /* CMUemblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE09A71C193AA900E41C31 /* CMUemblem.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,15 @@
 		0DBB954F1C14D4120061191B /* TartanVirtualTourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TartanVirtualTourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBB95541C14D4120061191B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DBB95551C14D4120061191B /* TartanVirtualTourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TartanVirtualTourTests.swift; sourceTree = "<group>"; };
+		0DBB955F1C14D4F00061191B /* tartanbgd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tartanbgd.jpg; sourceTree = "<group>"; };
+		0DBB95651C14DB6C0061191B /* TartanMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TartanMapViewController.swift; path = ../TartanMapViewController.swift; sourceTree = "<group>"; };
+		0DBB95671C1503AA0061191B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		0DBB95691C1504240061191B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0DD3F6C31C167173004A6950 /* TourStopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourStopInfoViewController.swift; sourceTree = "<group>"; };
+		0DD3F6C71C16B43B004A6950 /* MapVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVCExtension.swift; sourceTree = "<group>"; };
+		0DE1AF451C151CFC00EF9AAA /* TourStops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourStops.swift; sourceTree = "<group>"; };
+		0DE1AF491C1520AD00EF9AAA /* TourStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TourStop.swift; path = ../TourStop.swift; sourceTree = "<group>"; };
+		0DFE09A71C193AA900E41C31 /* CMUemblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CMUemblem.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +97,17 @@
 			children = (
 				0DBB953F1C14D4120061191B /* AppDelegate.swift */,
 				0DBB95411C14D4120061191B /* ViewController.swift */,
+				0DBB95651C14DB6C0061191B /* TartanMapViewController.swift */,
+				0DD3F6C71C16B43B004A6950 /* MapVCExtension.swift */,
+				0DD3F6C31C167173004A6950 /* TourStopInfoViewController.swift */,
+				0DE1AF451C151CFC00EF9AAA /* TourStops.swift */,
+				0DE1AF491C1520AD00EF9AAA /* TourStop.swift */,
+				0DBB95691C1504240061191B /* DataManager.swift */,
+				0DBB95671C1503AA0061191B /* Location.swift */,
 				0DBB95431C14D4120061191B /* Main.storyboard */,
 				0DBB95461C14D4120061191B /* Images.xcassets */,
+				0DBB955F1C14D4F00061191B /* tartanbgd.jpg */,
+				0DFE09A71C193AA900E41C31 /* CMUemblem.png */,
 				0DBB95481C14D4120061191B /* LaunchScreen.xib */,
 				0DBB953D1C14D4120061191B /* Supporting Files */,
 			);
@@ -193,8 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBB95451C14D4120061191B /* Main.storyboard in Resources */,
+				0DFE09A81C193AA900E41C31 /* CMUemblem.png in Resources */,
 				0DBB954A1C14D4120061191B /* LaunchScreen.xib in Resources */,
 				0DBB95471C14D4120061191B /* Images.xcassets in Resources */,
+				0DBB95601C14D4F00061191B /* tartanbgd.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +241,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBB95661C14DB6C0061191B /* TartanMapViewController.swift in Sources */,
+				0DBB956A1C1504240061191B /* DataManager.swift in Sources */,
+				0DE1AF4A1C1520AD00EF9AAA /* TourStop.swift in Sources */,
 				0DBB95421C14D4120061191B /* ViewController.swift in Sources */,
+				0DD3F6C41C167173004A6950 /* TourStopInfoViewController.swift in Sources */,
+				0DE1AF461C151CFC00EF9AAA /* TourStops.swift in Sources */,
+				0DD3F6C81C16B43B004A6950 /* MapVCExtension.swift in Sources */,
+				0DBB95681C1503AA0061191B /* Location.swift in Sources */,
 				0DBB95401C14D4120061191B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +447,7 @@
 				0DBB955B1C14D4120061191B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DBB955C1C14D4120061191B /* Build configuration list for PBXNativeTarget "TartanVirtualTourTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +456,7 @@
 				0DBB955E1C14D4120061191B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
