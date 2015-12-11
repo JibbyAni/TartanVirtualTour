@@ -8,6 +8,7 @@
 
 import MapKit
 import UIKit
+var justOnce:Bool = true
 
 enum MapType: Int {
     case Standard = 0
@@ -24,6 +25,8 @@ class TartanMapViewController: UIViewController {
     let location = Location()
     let tourStops = TourStops()
     var lastTappedCoordinates = CLLocationCoordinate2DMake(0,0)
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +47,17 @@ class TartanMapViewController: UIViewController {
         
         mapView.delegate = self
         
-        let alert = UIAlertController(title: "Welcome to Campus!", message: dataManager.generateMessage(), preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-        presentViewController(alert, animated: true, completion: nil)
 
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        println(justOnce)
+        if justOnce {
+            displayWelcome()
+            justOnce = false
+        }
+        println(justOnce)
     }
     
     let regionRadius: CLLocationDistance = 400
@@ -60,6 +70,13 @@ class TartanMapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func displayWelcome() {
+        let alert = UIAlertController(title: "Welcome to Campus!", message: dataManager.generateMessage(), preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
     }
 
     

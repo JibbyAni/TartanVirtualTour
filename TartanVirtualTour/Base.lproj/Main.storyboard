@@ -17,26 +17,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tartanbgd.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8sI-0j-3bc">
-                                <rect key="frame" x="0.0" y="-66" width="375" height="733"/>
+                                <rect key="frame" x="0.0" y="-83" width="375" height="733"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CMUemblem.png" translatesAutoresizingMaskIntoConstraints="NO" id="d44-mN-peY">
                                 <rect key="frame" x="40" y="220" width="240" height="244"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME TO CARNEGIE MELLON" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbo-zu-VUB">
-                                <rect key="frame" x="27" y="12" width="280" height="212"/>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="43"/>
+                                <rect key="frame" x="9" y="5" width="313" height="252"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="42"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Kxb-4B-NUh">
+                                <rect key="frame" x="162" y="494" width="145" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="15"/>
+                                <state key="normal" title="Browse Tour Stops">
+                                    <color key="titleColor" red="0.47606928659999997" green="0.077665616160000006" blue="0.13966269570000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="browseOptions" destination="BYZ-38-t0r" eventType="touchUpInside" id="D3h-uw-uHL"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cf-So-Aq0">
-                                <rect key="frame" x="0.0" y="492" width="325" height="30"/>
+                                <rect key="frame" x="9" y="494" width="145" height="30"/>
                                 <color key="backgroundColor" red="0.98585585220000005" green="1" blue="0.98223740240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="15"/>
                                 <state key="normal" title="Start Tour">
                                     <color key="titleColor" red="0.47606928659999997" green="0.077665616160000006" blue="0.13966269570000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startTour" destination="BYZ-38-t0r" eventType="touchUpInside" id="CDE-N8-WrC"/>
+                                    <action selector="startTour" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDg-gH-93a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,11 +58,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="svn-7m-osk" kind="show" identifier="mySegue" id="oHQ-rB-QiA"/>
+                        <segue destination="jgo-Hv-reN" kind="show" identifier="infoSegue" id="iho-1a-Mbf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="211" y="258"/>
+            <point key="canvasLocation" x="179" y="258"/>
         </scene>
         <!--Tartan Map View Controller-->
         <scene sceneID="Qhz-j7-3wN">
@@ -64,10 +78,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Epp-KB-2mP">
-                                <rect key="frame" x="31" y="11" width="258" height="44"/>
+                                <rect key="frame" x="0.0" y="11" width="320" height="44"/>
                                 <items>
                                     <navigationItem id="yJ9-ru-kaH">
                                         <nil key="title"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Home" style="done" id="gyf-m0-WEp">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="9KK-nG-H4o"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="lHd-0F-GMi">
                                             <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="YEN-R8-5gE">
                                                 <rect key="frame" x="36" y="6.5" width="230" height="31"/>
@@ -100,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmy-gh-sls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="282"/>
+            <point key="canvasLocation" x="572" y="258"/>
         </scene>
         <!--Tour Stop Info View Controller-->
         <scene sceneID="Gd8-Et-2fe">
@@ -120,41 +139,55 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qyU-oJ-dQl">
                                 <rect key="frame" x="-1" y="64" width="321" height="194"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stop Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9s-NE-8iq">
-                                <rect key="frame" x="59" y="291" width="203" height="28"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o5h-Oc-isr">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem id="2xD-Xj-jbj">
-                                        <barButtonItem key="leftBarButtonItem" title="Back to Map" id="9Uf-51-RbM">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="akD-kR-495">
                                             <color key="tintColor" red="0.47606928659999997" green="0.077665616160000006" blue="0.13966269570000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="svn-7m-osk" kind="show" id="oVD-UQ-ERL"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="LhC-mo-ltv"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Next Stop" id="Jgu-QO-TnV">
                                             <color key="tintColor" red="0.47606928659999997" green="0.077665616160000006" blue="0.13966269570000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="nextStop:" destination="jgo-Hv-reN" id="Upx-wF-6rh"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyo-Is-GTN">
-                                <rect key="frame" x="176" y="518" width="123" height="30"/>
+                                <rect key="frame" x="164" y="518" width="140" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Get Directions">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.47606928659999997" green="0.077665616160000006" blue="0.13966269570000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="getDirections:" destination="jgo-Hv-reN" eventType="touchUpInside" id="J71-vZ-hV5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uc-8k-NNc">
-                                <rect key="frame" x="35" y="343" width="264" height="145"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stop Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9s-NE-8iq">
+                                <rect key="frame" x="59" y="266" width="203" height="58"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTF-Vd-hdB">
+                                <rect key="frame" x="16" y="518" width="140" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <state key="normal" title="Browse All Stops">
+                                    <color key="titleColor" red="0.47606928659999997" green="0.077665616160000006" blue="0.13966269570000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="svn-7m-osk" kind="show" id="iik-9R-Jgs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uc-8k-NNc">
+                                <rect key="frame" x="16" y="324" width="288" height="164"/>
                                 <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -171,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kto-A7-VJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234" y="258"/>
+            <point key="canvasLocation" x="985" y="413"/>
         </scene>
     </scenes>
     <resources>
@@ -179,6 +212,8 @@
         <image name="tartanbgd.jpg" width="748" height="856"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oVD-UQ-ERL"/>
+        <segue reference="iik-9R-Jgs"/>
+        <segue reference="iho-1a-Mbf"/>
+        <segue reference="LhC-mo-ltv"/>
     </inferredMetricsTieBreakers>
 </document>

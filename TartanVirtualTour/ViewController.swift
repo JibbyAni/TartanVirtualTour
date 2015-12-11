@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     let dataManager = DataManager()
     let newLocation = Location()
+    let tourStops = TourStops()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +31,32 @@ class ViewController: UIViewController {
         dataManager.location = newLocation
         dataManager.saveLocations()
     
-//    
-//    let alert = UIAlertController(title: "Welcome to Campus!", message: dataManager.generateMessage(), preferredStyle: .Alert)
-//        
-//    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler:{ action in self.))
-        performSegueWithIdentifier("mySegue", sender: self)
-//    presentViewController(alert, animated: true, completion: nil)
+        performSegueWithIdentifier("infoSegue", sender: self)
         
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "infoSegue" {
+            let tstop = tourStops.stops[0]
+            let detailsVC:TourStopInfoViewController = segue.destinationViewController as! TourStopInfoViewController
+            detailsVC.tourStop = tstop
+        }
+    }
+
+    
+    @IBAction func browseOptions(){
+        
+        newLocation.getCurrentLocation()
+        dataManager.location = newLocation
+        dataManager.saveLocations()
+        
+        performSegueWithIdentifier("mySegue", sender: self)
+
+        
+        
+    }
+
 
 }
 

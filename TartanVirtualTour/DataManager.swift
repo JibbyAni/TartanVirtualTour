@@ -47,7 +47,7 @@ class DataManager {
     }
     
     func generateMessage() -> String {
-        let message = "Click ok to begin the Virtual Tour. "
+        let message = "Click ok to see the map, then click on any pin to browse each stop on the tour"
         return message
     }
 }
